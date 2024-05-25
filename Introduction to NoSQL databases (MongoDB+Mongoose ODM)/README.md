@@ -9,5 +9,5 @@ In this documentation, we'll be looking at how we can model MongoDB data using m
 first you'll need to clone the repository.
 
 ```bash
-git clone https://github.com/Erick-WG/mongo-Mongoose.git
+git clone https://github.com/Erick-WG/Advanced-Courses.git
 ```
