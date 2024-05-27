@@ -6,16 +6,21 @@ const {Schema, model} = mongoose
 
 // defining our schema using the destructured Schema constructor.
 const Blog = new Schema({
-    title: String,
+  
+  // Designing a simple schema with basic validation.
+    title: {
+      type: String,
+      required: true,
+    },
     slug: String,
     published: Boolean,
     author: String,
     content: String,
     tags: [String],
     createdAt: {
-        type: Date,
-        default: ()=> Date.now(),
-        immutable: true,
+      type: Date,
+      default: ()=> Date.now(),
+      immutable: true,
     },
     updatedAt: Date,
     comments: [{
