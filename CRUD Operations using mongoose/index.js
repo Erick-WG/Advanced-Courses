@@ -6,7 +6,7 @@ import blog from './model/Blog.js';
 
 // creating a connection to the mongodb atlas.// creating a connection.
 mongoose.connect("mongodb+srv://eric-wg:g0pRt2BO2uPWtKh7@cluster0.tpit2ek.mongodb.net/")
-// 
+//
 try{
     // creating instances of objects with our mode.
 
@@ -59,7 +59,7 @@ try{
             }],
     })
     // inserting our blog-post into the database.
-    // we call the article and add the save method to insert it o outr db.
+    // we call the article and add the save method to insert it our db.
 
     await article.save()
     await article2.save()
@@ -166,6 +166,8 @@ console.log(deletedMany)
 
 const deleted = await blog.findOneAndDelete(filter2)
 console.log(`Deleted the data related to the title ${filter2.title}:\n ${deleted}`)
+
+
 
 
 
