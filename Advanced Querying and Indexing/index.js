@@ -51,20 +51,20 @@ catch{
 
 const pipeline = [
     {$match: {author: 'Dave'}},
-    {$unwind: "$comments"},
-    {$match: { 'comments.votes' : {$lte :500}}},
+    {$unwind: '$comments'},
+    {$match: {'comments.votes': {$gt: 500}}},
     {
         $project: {
-            //_id: 0, // Exclude _id from the result
             title:1,
             author:1,
-            userCommented: "$comments.user",
-            comment: "$comments.content",
-            votes: "$comments.votes",
+            userCommented: '$comments.user',
+            famousComment: '$comments.content',
+            votes: '$comments.votes'
         }
-    },
+    }
     // Further stages for filtering, sorting, grouping, etc.
 ];
+
 
 
 //   results from aggregation.
@@ -75,12 +75,6 @@ await blog.aggregate(pipeline)
 .catch(err => {
     console.error(err);
 });
-
-
-
-
-
-
 
 
 
