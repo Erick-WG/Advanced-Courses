@@ -53,6 +53,7 @@ const pipeline = [
     {$match: {author: 'Dave'}},
     {$unwind: '$comments'},
     {$match: {'comments.votes': {$gt: 500}}},
+    {$sort: {'comments.votes': 1}},
     {
         $project: {
             title:1,
