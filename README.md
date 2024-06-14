@@ -13,5 +13,5 @@ git clone https://github.com/Erick-WG/Advanced-Courses.git
 ```
 ### Every folder in this repo has it's own documentation so you can get the most off this repository.
 
-~Happy~ ~coding~ \
-~Erick-WG~
+~ Happy coding \
+~ Erick-WG
